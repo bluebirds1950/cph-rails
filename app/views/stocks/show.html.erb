@@ -1,0 +1,23 @@
+<table class="table table-striped">
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Date</th>
+<th>Closing Price</th>
+<th>Sector</th>
+<th>Industry</th>
+</tr>
+<tr>
+<% @symbol_array.each do |s| %>
+<td> <%= s[:symbol].upcase %> </td>
+<td> <%= s[:name] %> </td>
+<td> <%= s[:date] %> </td>
+<td> <%= s[:close] %> </td>
+<td ><%= s[:sector] %> </td>
+<td> <%= s[:industry] %> </td>
+</tr>
+<% end %>
+</table>
+<div class="forms">
+<%= link_to 'Back', root_path%>
+</div>
